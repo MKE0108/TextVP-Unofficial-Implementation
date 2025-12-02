@@ -175,8 +175,11 @@ class TrainConfig:
         self.image_record = []
     
     def __repr__(self) -> str:
-        return (f"TrainConfig(exp_name='{self.exp_name}', tau={self.tau}, "
-                f"self_replace_step={self.self_replace_step}, encoded_emb={self.encoded_emb}, ")
+        return (f"TrainConfig(exp_name={self.exp_name}, "
+                f"cross_replace_step={self.cross_replace_step}, "
+                f"self_replace_step={self.self_replace_step}, "
+                f"encoded_emb={self.encoded_emb}, "
+                f"guidance_scale={self.guidance_scale})")
 
 
 # ==============================================================================
@@ -391,7 +394,7 @@ class ExperimentConfig:
     
     def __repr__(self) -> str:
         return (f"ExperimentConfig(\n"
-                f"  option_tau={self.option_tau},\n"
+                f"  option_guidance_scale={self.option_guidance_scale},\n"
                 f"  option_self_replace_step={self.option_self_replace_step},\n"
                 f"  option_encoded_emb={self.option_encoded_emb},\n"
                 f"  num_epochs={self.num_epochs}, lr={self.lr}\n"
