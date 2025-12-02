@@ -34,7 +34,7 @@ pip install -r requirements.txt
 ## 使用方法
 
 1. 準備資料集放置於 `dataset/` 目錄
-2. 使用 `TextVP.ipynb` 進行訓練和測試
+2. 使用 `main.ipynb` 進行訓練和測試
 3. 實驗結果會自動保存至 `experiments/` 目錄
 
 ## 致謝
