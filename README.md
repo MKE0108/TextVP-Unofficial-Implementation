@@ -15,10 +15,10 @@
 ├── seq_aligner.py          # 序列對齊工具
 ├── image_utils.py          # 圖像處理工具
 ├── inversion.py            # DDIM Inversion
-├── inp2p.py                # InstructPix2Pix 相關
 ├── TextVP.ipynb            # 主要訓練/測試 Notebook
 ├── data_generator/         # 資料生成工具
-│   └── prompt2prompt_gen_datapair.ipynb
+│   └── prompt2prompt_gen_datapair.ipynb # 生成 Prompt-to-Prompt 資料對 (prompt-to-prompt 版本)
+│   └── inp2p.py            # 生成 Prompt-to-Prompt 資料對(intructpix2pix 版本)
 ├── dataset/                # 資料集
 └── experiments/            # 實驗輸出目錄
 ```
