@@ -1,0 +1,45 @@
+# TextVP - Unofficial Implementation
+
+> **Textualize Visual Prompt for Image Editing via Diffusion Bridge** (AAAI'25)  
+> ⚠️ 這是非官方的實作版本
+
+## 簡介
+
+本專案是論文 "Textualize Visual Prompt for Image Editing via Diffusion Bridge" 的非官方實現，基於 [Prompt-to-Prompt](https://github.com/google/prompt-to-prompt) 框架開發。
+
+## 專案結構
+
+```
+├── experiment_config.py    # 實驗配置管理
+├── ptp_utils.py            # Prompt-to-Prompt 工具函數
+├── seq_aligner.py          # 序列對齊工具
+├── image_utils.py          # 圖像處理工具
+├── inversion.py            # DDIM Inversion
+├── inp2p.py                # InstructPix2Pix 相關
+├── TextVP.ipynb            # 主要訓練/測試 Notebook
+├── data_generator/         # 資料生成工具
+│   └── prompt2prompt_gen_datapair.ipynb
+├── dataset/                # 資料集
+└── experiments/            # 實驗輸出目錄
+```
+
+## 安裝
+
+```bash
+pip install -r requirements.txt
+```
+
+## 使用方法
+
+1. 準備資料集放置於 `dataset/` 目錄
+2. 使用 `TextVP.ipynb` 進行訓練和測試
+3. 實驗結果會自動保存至 `experiments/` 目錄
+
+## 致謝
+
+- 基於 [google/prompt-to-prompt](https://github.com/google/prompt-to-prompt) 開發
+- 原論文: Textualize Visual Prompt for Image Editing via Diffusion Bridge (AAAI'25)
+
+## Disclaimer
+
+This is an unofficial implementation and is not affiliated with the original authors.
