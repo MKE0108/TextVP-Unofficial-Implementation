@@ -37,6 +37,39 @@ pip install -r requirements.txt
 2. 使用 `main.ipynb` 進行訓練和測試
 3. 實驗結果會自動保存至 `experiments/` 目錄
 
+## 推論 (Sampling)
+
+使用 `sample.py` 對圖片進行風格轉換：
+
+```bash
+python sample.py \
+    --checkpoint path/to/epoch_X.pt \
+    --config path/to/train_config.json \
+    --image_dir path/to/input/images \
+    --output_dir path/to/output/images
+```
+
+### 範例
+
+```bash
+python sample.py \
+    -c ./experiments/20251203_014400/cross_replace=\[0.2,\ 1.0\],self_replace=0.0,encoded=False,guidance_scale=3.5,/epoch_13.pt \
+    -cfg ./experiments/20251203_014400/cross_replace=\[0.2,\ 1.0\],self_replace=0.0,encoded=False,guidance_scale=3.5,/train_config.json \
+    -i ./dataset_old/test_1130(single_data) \
+    -o ./sample
+```
+
+### 參數說明
+
+| 參數 | 縮寫 | 說明 |
+|------|------|------|
+| `--checkpoint` | `-c` | 訓練好的 `.pt` 檔案路徑 |
+| `--config` | `-cfg` | 對應的 `train_config.json` 路徑 |
+| `--image_dir` | `-i` | 輸入圖片目錄（或 glob pattern） |
+| `--output_dir` | `-o` | 輸出目錄 |
+| `--device` | `-d` | 使用的設備（預設 `cuda:0`） |
+| `--ext` | `-e` | 圖片副檔名（預設 `png`） |
+
 ## 致謝
 
 - 基於 [google/prompt-to-prompt](https://github.com/google/prompt-to-prompt) 開發
